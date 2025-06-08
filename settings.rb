@@ -20,7 +20,7 @@ class Settings
   end
 
   def respond_to_missing?(method_name, include_private = false)
-    @config.key?(method_name)
+    @config.key?(method_name) || super
   end
 end
 
